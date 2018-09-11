@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Question {
     private final String question;
-    private final String genere;
+    private final String genre;
     List<String> answers;
     int upVoteCount;
     int downVoteCount;
 
-    public Question(String question, String genere) {
+    public Question(String question, String genre) {
         this.question = question;
-        this.genere = genere;
+        this.genre = genre;
     }
 }
