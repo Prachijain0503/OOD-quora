@@ -6,9 +6,20 @@ import java.util.List;
 public class QuoraPlatform {
 
     private User user;
-    private Question question;
+    private List<Question> questions;
 
     public void postQuestion(Question question){
+        if(isSimilarQuestion(question));
+    }
+
+    private boolean isSimilarQuestion(Question question) {
+        for (Question ques: questions) {
+            if(question.equals(question))
+                return false;
+
+        }
+        return true;
+
 
     }
 
@@ -16,11 +27,11 @@ public class QuoraPlatform {
 
     }
 
-    public List<String> searchQuestion(String questionToAsk){
+    public List<Answer> searchQuestion(String questionToAsk){
         return Collections.emptyList();
     }
 
-    public void upVoteQuestion(Question question){
+    public void upVoteAnswer(Answer answer, User user){
 
     }
 
